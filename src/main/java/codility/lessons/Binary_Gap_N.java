@@ -1,4 +1,4 @@
-package codility;
+package codility.lessons;
 
 public class Binary_Gap_N {
 

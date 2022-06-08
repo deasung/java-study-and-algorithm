@@ -1,4 +1,4 @@
-package codility;
+package codility.lessons;
 
 /**
  * public int[] solution(int[] A, int K) {
