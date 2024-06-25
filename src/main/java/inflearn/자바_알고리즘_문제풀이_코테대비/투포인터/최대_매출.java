@@ -76,6 +76,7 @@ public class 최대_매출 {
 
     System.out.println(T.soltuion(n, k, a));
 
+
   }
 
 }
