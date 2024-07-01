@@ -23,6 +23,19 @@ import java.util.Scanner;
 public class 연속부분_수열 {
 
 
+  //강사가 푼 부분
+//  public int solution(int n, int m, int[] arr){
+//    int answer=0, sum=0, lt=0;
+//    for(int rt=0; rt<n; rt++){
+//      sum+=arr[rt];
+//      if(sum==m) answer++;
+//      while(sum>=m){
+//        sum-=arr[lt++];
+//        if(sum==m) answer++;
+//      }
+//    }
+//    return answer;
+//  }
   public int solution(int n, int m, int[] arr) {
 
     int answer = 0;
