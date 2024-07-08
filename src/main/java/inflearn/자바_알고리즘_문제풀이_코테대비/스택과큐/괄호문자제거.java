@@ -26,24 +26,49 @@ import java.util.Stack;
 public class 괄호문자제거 {
 
 
-    public static void main(String[] args) {
-
-        Scanner kb = new Scanner(System.in);
-
-        String s = kb.next();
+    public String solution(String str) {
+        String answer = "";
 
         Stack<Character> stack = new Stack<>();
-
-        //gpt가 푼거 근데 내가 푼거랑 좀 비슷했지만 난 틀렸다..
-        for (char x : s.toCharArray()) {
-            if (x == ')') {
-                while (!stack.isEmpty() && stack.pop() != '('); //<- 요거 낼 종이에다가 그려보자..꼬옥 20240705
+        for(char x : str.toCharArray()) {
+            if(x ==')') {
+                //stack.pop() 꺼낸값을 리턴 받는다.
+                while(stack.pop() != '(');
             } else {
                 stack.push(x);
             }
         }
 
-        System.out.printf(stack.toString());
+        for(int i = 0; i < stack.size(); i++) {
+            answer += stack.get(i);
+        }
+
+        return answer;
+
+    }
+
+    public static void main(String[] args) {
+
+        괄호문자제거 t = new 괄호문자제거();
+
+        Scanner kb = new Scanner(System.in);
+
+        String s = kb.next();
+
+        System.out.println(t.solution(s));
+
+//        Stack<Character> stack = new Stack<>();
+//
+//        //gpt가 푼거 근데 내가 푼거랑 좀 비슷했지만 난 틀렸다..
+//        for (char x : s.toCharArray()) {
+//            if (x == ')') {
+//                while (!stack.isEmpty() && stack.pop() != '('); //<- 요거 낼 종이에다가 그려보자..꼬옥 20240705
+//            } else {
+//                stack.push(x);
+//            }
+//        }
+//
+//        System.out.printf(stack.toString());
 
 
     }
