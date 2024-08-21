@@ -1,4 +1,4 @@
-package 백준.문제_10430;
+package 백준.사칙연산.문제_10430;
 
 import java.util.Scanner;
 
