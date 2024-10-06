@@ -6,17 +6,17 @@ public class Main {
 
   public static void main(String[] args) {
 
-    Scanner kb = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
 
-    int n = kb.nextInt();
+    // 세 개의 정수를 입력받습니다.
+    long A = scanner.nextLong();
+    long B = scanner.nextLong();
+    long C = scanner.nextLong();
 
-    int[] a = new int[n];
+    // 세 수의 합을 출력합니다.
+    System.out.println(A + B + C);
 
-    for(int i = 0; i < n; i++) {
-
-      a[i] = kb.nextInt();
-
-    }
+    scanner.close();
 
 
   }
