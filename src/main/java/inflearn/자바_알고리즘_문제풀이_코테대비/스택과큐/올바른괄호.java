@@ -1,7 +1,10 @@
 package inflearn.자바_알고리즘_문제풀이_코테대비.스택과큐;
 
 
+import java.util.HashMap;
+import java.util.Objects;
 import java.util.Scanner;
+import java.util.Stack;
 
 /**
  * 올바른 괄호
@@ -23,6 +26,25 @@ import java.util.Scanner;
  */
 public class 올바른괄호 {
 
+  public String solution(String str) {
+
+    String answer = "YES";
+    Stack<Character> stack = new Stack<>();
+    for(char x : str.toCharArray()) {
+      if(x == '(') stack.push(x);
+      else {
+        if(stack.isEmpty()) return "NO";
+        stack.pop();
+
+      }
+    }
+
+    if(!stack.isEmpty()) return "NO";
+    return answer;
+
+  }
+
+
 
   public static void main(String[] args) {
 
@@ -30,6 +52,21 @@ public class 올바른괄호 {
 
     String s = kb.next();
 
+    char[] temp = s.toCharArray();
+
+    HashMap<Character, Integer> result = new HashMap<>();
+
+    for (int i = 0; i < temp.length; i++) {
+
+      result.put(temp[i], result.getOrDefault(temp[i], 0) + 1);
+
+    }
+
+    if (Objects.equals(result.get('('), result.get(')'))) {
+      System.out.println("YES");
+    } else {
+      System.out.println("NO");
+    }
 
 
 
