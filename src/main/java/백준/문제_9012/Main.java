@@ -37,6 +37,8 @@ public class Main {
   private static boolean isValidParentheses(String input) {
     int balance = 0; // 괄호의 균형을 나타내는 변수
 
+    //toCharArray 문자열(String)을 문자(char)배열로 바꿔주는 메서드
+
     for (char c : input.toCharArray()) {
       if (c == '(') {
         balance++; // 여는 괄호일 경우 균형 증가
